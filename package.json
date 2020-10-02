@@ -1,11 +1,12 @@
 {
   "name": "nloqate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loqate API wrapper written in NodeJS",
   "main": "dist/nloqate.js",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\"",
+    "build": "tsc",
     "release": "npm run lint && npm run format && git add -A src && git push && git push --tags"
   },
   "repository": {
