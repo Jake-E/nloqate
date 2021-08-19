@@ -1,6 +1,6 @@
 {
   "name": "nloqate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Loqate API wrapper written in NodeJS",
   "main": "dist/nloqate.js",
   "scripts": {
