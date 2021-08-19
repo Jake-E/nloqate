@@ -7,12 +7,12 @@ const NLoqate = ({ key, origin = 'UK', countries = ['UK'] }: ILoqateOptions) => 
 
   const query = (endPoint: string, options: IReqOptions) => {
     options.params.Key = key;
-    return client.get(`${endPoint}/v1.00/json3.ws`, options);
+    return client.get(`${endPoint}/json3.ws`, options);
   };
 
   return {
     async search(partialAddress: string) {
-      const resp = await query('Find', {
+      const resp = await query('Find/v1.1', {
         params: {
           Countries: countries,
           Origin: origin,
@@ -22,7 +22,7 @@ const NLoqate = ({ key, origin = 'UK', countries = ['UK'] }: ILoqateOptions) => 
       return resp.data.Items.filter((item: { Type: string }) => item.Type === 'Address');
     },
     async get(addressId: number) {
-      const resp = await query('Retrieve', {
+      const resp = await query('Retrieve/v1.2', {
         params: {
           Id: addressId,
         },
