@@ -1,6 +1,6 @@
 {
   "name": "nloqate",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Loqate API wrapper written in NodeJS",
   "main": "dist/nloqate.js",
   "scripts": {
@@ -15,8 +15,9 @@
   },
   "keywords": [
     "loqate",
+    "nloqate",
     "node-loqate",
-    "addressy"
+    "loqate-node"
   ],
   "author": "Jake Evans",
   "license": "MIT",

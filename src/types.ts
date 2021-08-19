@@ -12,6 +12,7 @@ export interface IParams {
   Text?: string;
   Countries?: string[];
   Origin?: string;
-  Id?: number;
+  Id?: string;
   Key?: string;
+  Container?: string;
 }

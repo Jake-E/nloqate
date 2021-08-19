@@ -11,17 +11,18 @@ const NLoqate = ({ key, origin = 'UK', countries = ['UK'] }: ILoqateOptions) => 
   };
 
   return {
-    async search(partialAddress: string) {
+    async search(partialAddress: string, container?: string) {
       const resp = await query('Find/v1.1', {
         params: {
           Countries: countries,
           Origin: origin,
           Text: partialAddress,
+          Container: container
         },
       });
-      return resp.data.Items.filter((item: { Type: string }) => item.Type === 'Address');
+      return resp.data.Items;
     },
-    async get(addressId: number) {
+    async get(addressId: string) {
       const resp = await query('Retrieve/v1.2', {
         params: {
           Id: addressId,
